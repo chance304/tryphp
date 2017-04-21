@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title> Calculator</title>
+		<script type="text/javascript">
+			var operand;
+			var decimalPt = false;
+			var result = 0;
+			var operation;
+			function clickMe(buttonValue){
+				var txtBox = parseFloat(document.getElementById('txtBox').value);
+				var newVal;
+				if(!decimalPt)
+				{	
+					newVal = txtBox*10+buttonValue;
+				}
+				document.getElementById('txtBox').value = newVal;
+			}
+
+			function operator(operator){
+				operand = parseFloat(document.getElementById('txtBox').value);
+				switch(operator){
+					case '+':
+						
+					break;
+					case '-':
+					break;
+					case '*':
+					break;
+					case '/':
+					break;
+					case '=':
+					break;
+				}
+			}
+
+		</script>
+	</head>	
+	<body>
+		
+			<input type="texbox" id="txtBox" value="0"/>
+			<input type="button" id="0" value = "0" onclick="clickMe(0)" />
+			<input type="button" id="1" value = "1" onclick="clickMe(1)" />
+			<input type="button" id="2" value = "2" onclick="clickMe(2)" />
+			<input type="button" id="3" value = "3" onclick="clickMe(3)" />
+			<input type="button" id="4" value = "4" onclick="clickMe(4)" />
+			<input type="button" id="5" value = "5" onclick="clickMe(5)" />
+			<input type="button" id="6" value = "6" onclick="clickMe(6)" />
+			<input type="button" id="7" value = "7" onclick="clickMe(7)" />
+			<input type="button" id="8" value = "8" onclick="clickMe(8)" />
+			<input type="button" id="9" value = "9" onclick="clickMe(9)" />
+			<input type="button" id="add" value = "+" onclick="operator('+')" />
+			<input type="button" id="sub" value = "-" onclick="operator('-')" />
+			<input type="button" id="mul" value = "*" onclick="operator('*')" />
+			<input type="button" id="div" value = "/" onclick="operator('/')" />
+			<input type="button" id="equal" value = "=" onclick="equal('=')" />
+		
+	</body>
+</html>
